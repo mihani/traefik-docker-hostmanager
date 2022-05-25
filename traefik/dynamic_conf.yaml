@@ -1,0 +1,13 @@
+http:
+  routers:
+    traefik:
+      rule: "Host(`dashboard.localhost`)"
+      service: "api@internal"
+      tls:
+        domains:
+          - main: "*.localhost"
+
+tls:
+  certificates:
+    - certFile: "/etc/certs/fake.crt"
+      keyFile: "/etc/certs/fake.key"

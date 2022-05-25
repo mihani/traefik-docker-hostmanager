@@ -1,0 +1,24 @@
+version: "3.8"
+networks:
+  hostmanager:
+    external: true
+
+services:
+  hostmanager:
+    image: traefik:rocamadour
+    container_name: "hostmanager"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik=true"
+      - "traefik.http.routers.traefik.tls=true"
+    ports:
+      - 443:443
+      - 80:80
+      - 8080:8080
+    volumes:
+      - ./traefik/dynamic_conf.yaml:/etc/traefik/dynamic_conf.yaml:ro
+      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      - ./certs:/etc/certs:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - hostmanager
