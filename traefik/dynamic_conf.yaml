@@ -1,7 +1,7 @@
 http:
   routers:
     traefik:
-      rule: "Host(`dashboard.localhost`)"
+      rule: "Host(`traefikboard.localhost`)"
       service: "api@internal"
       tls:
         domains:
@@ -11,3 +11,8 @@ tls:
   certificates:
     - certFile: "/etc/certs/fake.crt"
       keyFile: "/etc/certs/fake.key"
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /etc/certs/fake.crt
+        keyFile: /etc/certs/fake.key
