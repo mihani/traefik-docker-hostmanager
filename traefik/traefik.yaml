@@ -8,13 +8,12 @@ api:
 providers:
   docker:
     endpoint: unix:///var/run/docker.sock
-    watch: true
-    exposedbydefault: false
+    useBindPortIP: true # tell Traefik to use the IP/Port attached to the container's binding instead of its inner network IP/Port
+    exposedByDefault: false
     network: hostmanager
 
   file:
     filename: /etc/traefik/dynamic_conf.yaml
-    watch: true
 
 accessLog: {}
 
@@ -33,3 +32,6 @@ entryPoints:
 
   websecure:
     address: ':443'
+
+  database:
+    address: ':3316/tcp'
