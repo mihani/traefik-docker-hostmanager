@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.8](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.7...v0.5.8) (2024-04-01)
+
+
+### Bug Fixes
+
+* **ci:** Update Docker up action version ([#25](https://github.com/mihani/traefik-docker-hostmanager/issues/25)) ([3cbf60f](https://github.com/mihani/traefik-docker-hostmanager/commit/3cbf60f91bc4ed65b96b272fcbcd08f981c03d1c))
+
 ## [0.5.7](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.6...v0.5.7) (2024-04-01)
 
 
