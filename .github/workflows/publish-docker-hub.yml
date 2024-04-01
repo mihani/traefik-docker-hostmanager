@@ -6,10 +6,7 @@
 name: Publish Docker image
 
 on:
-  push:
-    tags:
-      - v0.*
-      - v1.*
+  workflow_call:
 
 jobs:
   push_to_registry:
