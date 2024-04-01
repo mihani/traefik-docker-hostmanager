@@ -19,10 +19,11 @@ jobs:
     name: Release Please
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v4
-
       - name: Release Please
         uses: google-github-actions/release-please-action@v4
         with:
           release-type: node
+
+  publish-docker-hub:
+    if: ${{ needs.release-please.outputs.release_created }}
+    uses: mihani/traefik-docker-hostmanager/.github/workflows/publish-docker-hub.yml@main
