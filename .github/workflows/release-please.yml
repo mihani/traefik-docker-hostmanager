@@ -18,6 +18,8 @@ jobs:
   release-please:
     name: Release Please
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release-please.outputs.release_created }}
     steps:
       - name: Release Please
         uses: google-github-actions/release-please-action@v4
@@ -27,5 +29,5 @@ jobs:
   publish-docker-hub:
     name: Publish on Docker Hub
     needs: [release-please]
-    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    if: ${{ needs.release-please.outputs.release_created }}
     uses: mihani/traefik-docker-hostmanager/.github/workflows/publish-docker-hub.yml@main
