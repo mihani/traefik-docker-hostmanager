@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.7](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.6...v0.5.7) (2024-04-01)
+
+
+### Bug Fixes
+
+* **ci:** Fix release please output ([#24](https://github.com/mihani/traefik-docker-hostmanager/issues/24)) ([e80de94](https://github.com/mihani/traefik-docker-hostmanager/commit/e80de94d78e200fe255bf5eb82aecafdf5f19e13))
+* **ci:** Fix release please variable in if statement ([#22](https://github.com/mihani/traefik-docker-hostmanager/issues/22)) ([0b9dfc6](https://github.com/mihani/traefik-docker-hostmanager/commit/0b9dfc6469c87b69c44f231263dd5da7cce85f8c))
+
 ## [0.5.6](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.5...v0.5.6) (2024-04-01)
 
 
