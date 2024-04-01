@@ -29,5 +29,5 @@ jobs:
   publish-docker-hub:
     name: Publish on Docker Hub
     needs: [release-please]
-    if: ${{ needs.release-please.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.release_created == 'true' }}
     uses: mihani/traefik-docker-hostmanager/.github/workflows/publish-docker-hub.yml@main
