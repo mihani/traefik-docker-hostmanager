@@ -12,5 +12,3 @@
 ### Bug Fixes
 
 * **README.md:** Update documentation ([1b09061](https://github.com/mihani/traefik-docker-hostmanager/commit/1b0906145b5db9197c9e8948a5f02513950a6a20))
-
-## CHANGELOG.md
