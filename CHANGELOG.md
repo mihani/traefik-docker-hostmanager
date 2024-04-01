@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.0...v0.5.1) (2024-04-01)
+
+
+### Bug Fixes
+
+* **ci:** fix needs on publish-docker-hub job ([#6](https://github.com/mihani/traefik-docker-hostmanager/issues/6)) ([b342d6b](https://github.com/mihani/traefik-docker-hostmanager/commit/b342d6b4d7b085b7603ef88e1a37091effd99f10))
+
 ## [0.5.0](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.4.0...v0.5.0) (2024-04-01)
 
 
