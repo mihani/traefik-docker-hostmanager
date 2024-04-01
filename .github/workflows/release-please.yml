@@ -26,11 +26,10 @@ jobs:
 
   publish-docker-hub:
     needs: [release-please]
+    if: ${{ ! needs.release-please.outputs.release_created }}
     runs-on: ubuntu-latest
     steps:
       - name: Echo
-        env:
-          OUTPUT: ${{ needs.release-please.outputs.release_created }}
-        run: echo "$OUTPUT"
+        run: echo "coucou"
 #    if: ${{ job.release-please.outputs.release_created }}
 #    uses: mihani/traefik-docker-hostmanager/.github/workflows/publish-docker-hub.yml@main
