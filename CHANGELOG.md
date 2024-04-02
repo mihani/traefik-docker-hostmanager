@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.10](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.9...v0.5.10) (2024-04-02)
+
+
+### Bug Fixes
+
+* **ci:** Passing inherit secret to nested workflow ([#29](https://github.com/mihani/traefik-docker-hostmanager/issues/29)) ([531c9f7](https://github.com/mihani/traefik-docker-hostmanager/commit/531c9f72568946d21594dbeff628065b245c7f7c))
+
 ## [0.5.9](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.8...v0.5.9) (2024-04-01)
 
 
