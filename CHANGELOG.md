@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.12](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.11...v0.5.12) (2024-04-02)
+
+
+### Bug Fixes
+
+* **ci:** explicit tag in build push action ([#33](https://github.com/mihani/traefik-docker-hostmanager/issues/33)) ([c797938](https://github.com/mihani/traefik-docker-hostmanager/commit/c797938e32f15669f2bdc22249692eee16b5c3a8))
+
 ## [0.5.11](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.10...v0.5.11) (2024-04-02)
 
 
