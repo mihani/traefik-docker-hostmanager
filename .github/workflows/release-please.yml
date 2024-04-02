@@ -32,3 +32,4 @@ jobs:
     needs: [release-please]
     if: ${{ needs.release-please.outputs.releases_created == true || needs.release-please.outputs.releases_created == 'true' }}
     uses: mihani/traefik-docker-hostmanager/.github/workflows/publish-docker-hub.yml@main
+    secrets: inherit
