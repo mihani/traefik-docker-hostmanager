@@ -5,23 +5,42 @@
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install)
 
-## Usage
+## Install
 
-### Install
+>[!WARNING]
+> Before installation, we need to check ports, 443, 8080 and 80 are free
 
-Create `hostmanager` network then run container
-
+### TL;DR 
 ```shell
 docker network create hostmanager && docker run -d --name traefik-docker-hostmanager --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 -p 443:443 -p 8080:8080 --network hostmanager mihani/traefik-docker-hostmanager
 ```
 
-In previous commands docker option `--restart=always` allow to start container when Docker Engine start
+### Step by step
+
+1. Create `hostmanager` network then run container
+```shell
+docker network create hostmanager
+```
+
+2. Create and run the container
+
+* If you want container start when Docker Engine start run :
+```shell
+docker run -d --name traefik-docker-hostmanager --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 -p 443:443 -p 8080:8080 --network hostmanager mihani/traefik-docker-hostmanager
+```
+* If not, run :
+```shell
+ docker run -d --name traefik-docker-hostmanager -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 -p 443:443 -p 8080:8080 --network hostmanager mihani/traefik-docker-hostmanager
+```
+
+
+## Usage
 
 ### Traefik Dashboard
 
 You can access to traefik dashboard with this url : `https://traefikboard.localhost`
 
-### Edit your docker-compose
+### Edit your compose.yaml (or docker-compose.yaml)
 
 #### 1. Edit your network declaration
 
@@ -68,7 +87,7 @@ Example of service declaration with minimal information needed :
     networks:
       - hostmanager
       - internal-project-network-name
-#   Rest of docker-compose configuration
+#   Rest of docker compose configuration
 ```
 
 Now you just need to call name use in `Host` rule to access at you container, in your favorite browser.
