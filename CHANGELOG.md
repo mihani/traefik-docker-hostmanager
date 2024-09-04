@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.12...v0.6.0) (2024-09-04)
+
+
+### Features
+
+* **readme:** Add new step to install + warning about ports before install ([#35](https://github.com/mihani/traefik-docker-hostmanager/issues/35)) ([9e1728b](https://github.com/mihani/traefik-docker-hostmanager/commit/9e1728b40342214604e0f0616e29165cecf309f8))
+
 ## [0.5.12](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.11...v0.5.12) (2024-04-02)
 
 
