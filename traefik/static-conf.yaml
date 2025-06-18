@@ -7,16 +7,17 @@ api:
 
 providers:
   docker:
-    endpoint: unix:///var/run/docker.sock
-    watch: true
-    exposedbydefault: false
+    endpoint: "unix:///var/run/docker.sock"
+    watch: true # Traefik watch docker event
+    exposedByDefault: false # Disallow creation route for container
     network: hostmanager
 
   file:
     filename: /etc/traefik/dynamic_conf.yaml
     watch: true
 
-accessLog: {}
+accessLog:
+  addInternals: true
 
 log:
   level: ERROR
@@ -30,6 +31,7 @@ entryPoints:
         entryPoint:
           to: websecure
           scheme: https
+          permanent: true
 
   websecure:
     address: ':443'

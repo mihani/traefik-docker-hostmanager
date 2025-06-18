@@ -1,4 +1,4 @@
 .idea/
-Makefile
-docker-compose.yml
 .github/
+CHANGELOG.md
+README.md
