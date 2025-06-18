@@ -1,0 +1,5 @@
+###> ide/os ###
+.idea
+.DS_Store
+.vscode
+###< ide/os ###
