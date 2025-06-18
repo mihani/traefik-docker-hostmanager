@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.6.0...v1.0.0) (2025-06-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **traefik:** Update the traefik version to v3.4.1 ([#40](https://github.com/mihani/traefik-docker-hostmanager/issues/40))
+
+### Features
+
+* **traefik:** Update the traefik version to v3.4.1 ([#40](https://github.com/mihani/traefik-docker-hostmanager/issues/40)) ([b946bb1](https://github.com/mihani/traefik-docker-hostmanager/commit/b946bb129764cd59cd675a54974ad04a6580ac69))
+
 ## [0.6.0](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.5.12...v0.6.0) (2024-09-04)
 
 
