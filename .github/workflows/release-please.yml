@@ -25,9 +25,9 @@ jobs:
       - name: Release Please
         id: release-please
         uses: googleapis/release-please-action@v4
-        token: ${{ secrets.RELEASE_PLEASE_PAT }}
         with:
           release-type: node
+          token: ${{ secrets.RELEASE_PLEASE_PAT }}
 
   publish-docker-hub:
     name: Publish on Docker Hub
