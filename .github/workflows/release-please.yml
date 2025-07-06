@@ -19,20 +19,20 @@ jobs:
     name: Release Please
     runs-on: ubuntu-latest
     outputs:
-      releases_created: ${{ steps.release-please.outputs.releases_created }}
-      version: v${{ steps.release-please.outputs.major }}.${{ steps.release-please.outputs.minor }}.${{ steps.release-please.outputs.patch }}
+      release_created: ${{ steps.release-please.outputs.release_created }}
+      version: ${{ steps.release-please.outputs.version }}
     steps:
       - name: Release Please
         id: release-please
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         with:
           release-type: node
 
   publish-docker-hub:
     name: Publish on Docker Hub
     needs: [release-please]
-    if: ${{ needs.release-please.outputs.releases_created == true || needs.release-please.outputs.releases_created == 'true' }}
-    uses: mihani/traefik-docker-hostmanager/.github/workflows/publish-docker-hub.yml@main
+    if: ${{ needs.release-please.outputs.release_created }}
+    uses: ./.github/workflows/reusable-docker-hub-publisher.yml
     secrets: inherit
     with:
       version: ${{ needs.release-please.outputs.version }}
