@@ -1,4 +1,4 @@
-FROM traefik:v3.4.1
+FROM traefik:v3.6
 
 LABEL traefik.enable="true" \
      traefik.http.routers.traefik="true" \
