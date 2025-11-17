@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/mihani/traefik-docker-hostmanager/compare/v1.0.0...v1.0.1) (2025-11-17)
+
+
+### Bug Fixes
+
+* **ci:** Fix release please workflow - Part 2 ([#51](https://github.com/mihani/traefik-docker-hostmanager/issues/51)) ([54537f0](https://github.com/mihani/traefik-docker-hostmanager/commit/54537f0f48a518b4e246228479e6bb3ea72ad83b))
+* **ci:** Fix release please workflow ([#50](https://github.com/mihani/traefik-docker-hostmanager/issues/50)) ([61a52b1](https://github.com/mihani/traefik-docker-hostmanager/commit/61a52b1507e4e8b17ec13ff33d7110a89e5ea931))
+
 ## [1.0.0](https://github.com/mihani/traefik-docker-hostmanager/compare/v0.6.0...v1.0.0) (2025-06-18)
 
 
